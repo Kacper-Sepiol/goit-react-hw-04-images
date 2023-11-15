@@ -2,12 +2,18 @@ import React from 'react';
 import '../styles/styles.css';
 import ImageGalleryItem from 'components/imageGalleryItem/ImageGalleryItem';
 import PropTypes from 'prop-types';
+import { nanoid } from 'nanoid';
 
 const ImageGallery = ({ images, openModal }) => {
+  let i = 1;
   return (
     <ul className="ImageGallery">
       {images.map(image => (
-        <ImageGalleryItem key={image.id} image={image} openModal={openModal} />
+        <ImageGalleryItem
+          key={(i = i + 1)}
+          image={image}
+          openModal={openModal}
+        />
       ))}
     </ul>
   );
