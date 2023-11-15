@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/styles.css';
 import ImageGalleryItem from 'components/imageGalleryItem/ImageGalleryItem';
 import PropTypes from 'prop-types';
-import { nanoid } from 'nanoid';
 
 const ImageGallery = ({ images, openModal }) => {
   let i = 1;
