@@ -6,8 +6,6 @@ import Loader from './loader/Loader';
 import Button from './button/Button';
 import Modal from './modal/Modal';
 import { useState } from 'react';
-// import { getPixaBayUrl } from 'consts/pixabay';
-// import { apiKey } from 'consts/pixabay';
 
 export const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -27,7 +25,6 @@ export const App = () => {
   };
 
   const fetchImages = () => {
-    // .env nie dziala :(
     const apiKey = '38274981-bf681d1339bb2c6c927a948b3';
     const url = `https://pixabay.com/api/?q=${searchQuery}&page=${page}&key=${apiKey}&image_type=photo&orientation=horizontal&per_page=12`;
 
@@ -44,11 +41,6 @@ export const App = () => {
         setIsLoading(false);
       });
   };
-
-  // const checkImages = () => {
-  //   const prevImage = setImages(prevImages => []);
-  //   console.log(prevImage);
-  // };
 
   const openModal = image => {
     setShowModal(true);
